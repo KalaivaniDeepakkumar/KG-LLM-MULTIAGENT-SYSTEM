@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sustainable Residue Allocation Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded-2xl shadow-lg">
+    <header class="text-center mb-6">
+      <h1 class="text-3xl font-extrabold text-blue-900">Sustainable Residue Allocation Planner</h1>
+      <p class="text-gray-600 mt-1">Structured allocation + expert explanation — ready to implement</p>
+        </header>
+
+        {% if error_message %}
+    <div class="bg-red-100 text-red-800 p-4 rounded mb-4">
+      <strong>Error:</strong> {{ error_message }}
+        </div>
+        {% endif %}
+
+    <form method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Crop Type</label>
+        <select name="crop_type" id="crop_type" required class="mt-1 w-full p-2 border rounded">
+          <option value="">Loading...</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Crop Yield (tons)</label>
+        <input name="crop_yield" type="number" step="0.01" required value="{{ inputs.crop_yield }}" class="mt-1 w-full p-2 border rounded" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Residue Available (tons)</label>
+        <input name="residue_amount" type="number" step="0.01" required value="{{ inputs.residue_amount }}" class="mt-1 w-full p-2 border rounded" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Soil Type</label>
+        <select name="soil_type" id="soil_type" required class="mt-1 w-full p-2 border rounded">
+          <option value="">Loading...</option>
+        </select>
+      </div>
+      <div class="md:col-span-2">
+        <label class="block text-sm font-medium text-gray-700">District (Tamil Nadu)</label>
+        <select name="location" id="location" required class="mt-1 w-full p-2 border rounded">
+          <option value="">Loading...</option>
+        </select>
+      </div>
+
+      <button type="submit" class="md:col-span-2 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">
+        Generate Optimized Plan
+      </button>
+    </form>
+
+    <script>
+      // Load dropdown options from API
+      async function loadDropdownOptions() {
+        try {
+          // Load crops
+          const cropsRes = await fetch('/api/crops');
+          const cropsData = await cropsRes.json();
+          const cropSelect = document.getElementById('crop_type');
+          cropSelect.innerHTML = '<option value="">Select Crop Type</option>';
+          if (cropsData.crops) {
+            cropsData.crops.forEach(crop => {
+              const option = document.createElement('option');
+              option.value = crop;
+              option.textContent = crop;
+              if (crop === '{{ inputs.crop_type }}') {
+                option.selected = true;
+              }
+              cropSelect.appendChild(option);
+            });
+          }
+
+          // Load soils
+          const soilsRes = await fetch('/api/soils');
+          const soilsData = await soilsRes.json();
+          const soilSelect = document.getElementById('soil_type');
+          soilSelect.innerHTML = '<option value="">Select Soil Type</option>';
+          if (soilsData.soils) {
+            soilsData.soils.forEach(soil => {
+              const option = document.createElement('option');
+              option.value = soil;
+              option.textContent = soil;
+              if (soil === '{{ inputs.soil_type }}') {
+                option.selected = true;
+              }
+              soilSelect.appendChild(option);
+            });
+          }
+
+          // Load districts
+          const districtsRes = await fetch('/api/districts');
+          const districtsData = await districtsRes.json();
+          const districtSelect = document.getElementById('location');
+          districtSelect.innerHTML = '<option value="">Select District</option>';
+          if (districtsData.districts) {
+            districtsData.districts.forEach(district => {
+              const option = document.createElement('option');
+              option.value = district;
+              option.textContent = district;
+              if (district === '{{ inputs.location }}') {
+                option.selected = true;
+              }
+              districtSelect.appendChild(option);
+            });
+          }
+        } catch (error) {
+          console.error('Error loading dropdown options:', error);
+          // Fallback to text inputs if API fails
+          document.getElementById('crop_type').outerHTML = '<input name="crop_type" required value="{{ inputs.crop_type }}" class="mt-1 w-full p-2 border rounded" />';
+          document.getElementById('soil_type').outerHTML = '<input name="soil_type" required value="{{ inputs.soil_type }}" class="mt-1 w-full p-2 border rounded" />';
+          document.getElementById('location').outerHTML = '<input name="location" required value="{{ inputs.location }}" class="mt-1 w-full p-2 border rounded" />';
+        }
+      }
+
+      // Load options when page loads
+      loadDropdownOptions();
+    </script>
+
+    {% if result_json %}
+    <div class="mt-8 border-t pt-6">
+      <div class="flex items-start justify-between mb-4">
+        <h2 class="text-2xl font-bold">Optimized Allocation</h2>
+        <div class="space-x-2">
+          <button id="copyJson" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">Copy JSON</button>
+          <button id="downloadJson" class="px-3 py-2 bg-gray-100 rounded text-sm">Download JSON</button>
+          <button id="regenerateStructured" class="px-3 py-2 bg-emerald-600 text-white rounded text-sm">Regenerate</button>
+        </div>
+                </div>
+
+      <!-- Knowledge Graph Context Display -->
+      {% if kg_context %}
+      <div class="mb-6 bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="text-lg font-semibold text-blue-900 flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            Knowledge Graph Context
+          </h3>
+          <button id="toggleContext" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Hide</button>
+        </div>
+        <div id="contextContent" class="text-sm text-gray-700 whitespace-pre-line bg-white p-4 rounded border border-blue-200 max-h-96 overflow-y-auto">
+          <pre class="font-sans text-sm">{{ kg_context|e }}</pre>
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Allocation Table & Chart -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-gray-50 p-4 rounded shadow-sm">
+          <h3 class="font-semibold text-lg mb-2">Allocation Breakdown</h3>
+          <table class="w-full text-sm">
+            <thead class="text-left">
+              <tr><th class="pb-2">Pathway</th><th class="pb-2">%</th><th class="pb-2">Tons</th></tr>
+            </thead>
+            <tbody id="alloc-table-body"></tbody>
+          </table>
+                </div>
+
+        <div class="bg-gray-50 p-4 rounded shadow-sm">
+          <h3 class="font-semibold text-lg mb-2">Allocation Chart</h3>
+          <canvas id="allocChart" width="400" height="300"></canvas>
+        </div>
+                </div>
+
+      <!-- Justification / Benefits / Risks / Notes -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+        <div class="bg-white p-4 rounded shadow-sm">
+          <h4 class="font-semibold mb-2">Justification</h4>
+          <p class="text-sm text-gray-700"><strong>Sustainability:</strong> <span id="just-sust"></span></p>
+          <p class="text-sm text-gray-700 mt-2"><strong>Local Demand:</strong> <span id="just-local"></span></p>
+          <p class="text-sm text-gray-700 mt-2"><strong>CO₂:</strong> <span id="just-co2"></span></p>
+                </div>
+
+        <div class="bg-white p-4 rounded shadow-sm">
+          <h4 class="font-semibold mb-2">Benefits</h4>
+          <ul id="benefits-list" class="list-disc pl-5 text-sm text-gray-700"></ul>
+                </div>
+
+        <div class="bg-white p-4 rounded shadow-sm">
+          <h4 class="font-semibold mb-2">Risks</h4>
+          <ul id="risks-list" class="list-disc pl-5 text-sm text-gray-700"></ul>
+                </div>
+            </div>
+
+      <div class="mt-4 bg-white p-4 rounded shadow-sm">
+        <h4 class="font-semibold mb-2">Notes</h4>
+        <p id="notes" class="text-sm text-gray-700"></p>
+                </div>
+
+      <div class="mt-4 bg-white p-4 rounded shadow-sm">
+        <h4 class="font-semibold mb-2">Detailed Explanation</h4>
+        <p id="detailed-expl" class="text-sm text-gray-700 whitespace-pre-line"></p>
+                    </div>
+                </div>
+
+    <script>
+      // renderStructured is executed immediately with server data
+      const result = {{ result_json | tojson }};
+      // Fill table
+      const tbody = document.getElementById('alloc-table-body');
+      const labels = [], values = [], tons = [];
+      if (result.allocation && Array.isArray(result.allocation)) {
+        result.allocation.forEach(a => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `<td class="py-2">${a.pathway}</td><td class="py-2">${a.percentage}%</td><td class="py-2">${a.tons}</td>`;
+          tbody.appendChild(tr);
+          labels.push(a.pathway);
+          values.push(a.percentage);
+          tons.push(a.tons);
+        });
+      }
+
+      // Chart.js pie chart
+      const ctx = document.getElementById('allocChart').getContext('2d');
+      const chart = new Chart(ctx, {
+        type: 'pie',
+        data: { labels: labels, datasets: [{ data: values }] },
+        options: { plugins: { legend: { position: 'bottom' } } }
+      });
+
+      // Justification / benefits / risks / notes / detailed explanation
+      document.getElementById('just-sust').textContent = (result.justification && result.justification.sustainability) || '';
+      document.getElementById('just-local').textContent = (result.justification && result.justification.local_demand) || '';
+      document.getElementById('just-co2').textContent = (result.justification && result.justification.co2) || '';
+
+      const bList = document.getElementById('benefits-list');
+      if (result.benefits && result.benefits.length) {
+        result.benefits.forEach(b => { const li = document.createElement('li'); li.textContent = b; bList.appendChild(li); });
+      }
+
+      const rList = document.getElementById('risks-list');
+      if (result.risks && result.risks.length) {
+        result.risks.forEach(r => { const li = document.createElement('li'); li.textContent = r; rList.appendChild(li); });
+      }
+
+      document.getElementById('notes').textContent = result.notes || '';
+      document.getElementById('detailed-expl').textContent = result.detailed_explanation || '';
+
+      // copy JSON
+      document.getElementById('copyJson').addEventListener('click', async () => {
+        await navigator.clipboard.writeText(JSON.stringify(result, null, 2));
+        alert('Copied JSON to clipboard');
+      });
+
+      // download JSON
+      document.getElementById('downloadJson').addEventListener('click', () => {
+        const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
+                                const url = URL.createObjectURL(blob);
+                                const a = document.createElement('a');
+                                a.href = url;
+        a.download = 'allocation.json';
+                                document.body.appendChild(a);
+                                a.click();
+                                a.remove();
+                                URL.revokeObjectURL(url);
+                            });
+
+      // Toggle context visibility
+      const toggleContextBtn = document.getElementById('toggleContext');
+      const contextContent = document.getElementById('contextContent');
+      if (toggleContextBtn && contextContent) {
+        toggleContextBtn.addEventListener('click', () => {
+          if (contextContent.style.display === 'none') {
+            contextContent.style.display = 'block';
+            toggleContextBtn.textContent = 'Hide';
+          } else {
+            contextContent.style.display = 'none';
+            toggleContextBtn.textContent = 'Show';
+                                    }
+                                });
+                            }
+
+      // Regenerate structured by calling /regenerate
+      document.getElementById('regenerateStructured').addEventListener('click', async (ev) => {
+        ev.target.disabled = true;
+        ev.target.textContent = 'Generating...';
+        try {
+          const payload = {
+            crop_type: document.querySelector('input[name="crop_type"]').value,
+            crop_yield: document.querySelector('input[name="crop_yield"]').value,
+            residue_amount: document.querySelector('input[name="residue_amount"]').value,
+            soil_type: document.querySelector('input[name="soil_type"]').value,
+            location: document.querySelector('input[name="location"]').value
+          };
+          const res = await fetch('/regenerate', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+          const json = await res.json();
+          if (!res.ok) {
+            alert('Regenerate failed: ' + (json.error || 'Unknown'));
+          } else {
+            // Store context if present
+            if (json._kg_context) {
+              sessionStorage.setItem('kg_context', json._kg_context);
+            }
+            // reload page with new JSON by replacing DOM
+            window.location.reload();
+          }
+        } catch (err) {
+          alert('Network error: ' + err.message);
+        } finally {
+          ev.target.disabled = false;
+          ev.target.textContent = 'Regenerate';
+        }
+      });
+
+                </script>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>

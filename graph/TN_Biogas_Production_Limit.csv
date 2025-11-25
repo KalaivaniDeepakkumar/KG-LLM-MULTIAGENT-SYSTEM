@@ -1,0 +1,39 @@
+﻿District,Biogas_Production_Score,Biogas_Limit_Level,Compost_Capacity_t_per_day,Biochar_Max_pct_reported,Biochar_Potential_Score_0_10,Biochar_Limit_pct,Biochar_Level
+Ariyalur,0,None,42,23,4,20,Medium
+Chengalpattu,0,None,0,0,0,0,None
+Chennai,10,Very High,20,10,0,0,None
+Coimbatore,5,High,55,30,10,30,Very High
+Cuddalore,2,Low,50,27,8,30,Very High
+Dharmapuri,0,None,40,22,4,20,Medium
+Dindigul,0,None,46,25,6,25,High
+Erode,2,Low,50,28,8,30,Very High
+Kallakurichi,0,None,0,0,0,0,None
+Kancheepuram,0,None,0,0,0,0,None
+Kanniyakumari,2,Low,0,0,0,0,None
+Karur,0,None,42,22,4,20,Medium
+Krishnagiri,0,None,38,22,3,15,Low
+Madurai,6,High,47,25,6,25,High
+Mayiladuthurai,0,None,0,0,0,0,None
+Nagapattinam,2,Low,55,28,9,30,Very High
+Namakkal,4,Medium,45,26,6,25,High
+Nilgiris,0,None,30,15,1,10,Very Low
+Perambalur,0,None,44,24,5,20,Medium
+Pudukkottai,0,None,43,23,4,20,Medium
+Ramanathapuram,0,None,35,20,3,15,Low
+Ranipet,0,None,0,0,0,0,None
+Salem,5,High,48,25,6,25,High
+Sivagangai,0,None,38,22,3,15,Low
+Tenkasi,0,None,42,23,4,20,Medium
+Thanjavur,0,None,60,30,10,30,Very High
+Theni,2,Low,42,22,4,20,Medium
+Thoothukudi,3,Medium,40,22,4,20,Medium
+Tiruchirappalli,4,Medium,52,27,8,30,Very High
+Tirunelveli,3,Medium,45,24,6,25,High
+Tirupathur,0,None,0,0,0,0,None
+Tiruppur,0,None,50,27,8,30,Very High
+Tiruvallur,3,Medium,0,0,0,0,None
+Tiruvannamalai,0,None,46,25,6,25,High
+Tiruvarur,0,None,58,30,10,30,Very High
+Vellore,0,None,48,26,6,25,High
+Viluppuram,0,None,0,0,0,0,None
+Virudhunagar,0,None,40,23,4,20,Medium

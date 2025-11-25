@@ -1,0 +1,269 @@
+Crop,Residue_Factor,Residue_Type,N_pct,P_pct,K_pct,Common_Use
+Rice (Paddy),1.5,Straw,0.5,0.1,1.2,"Compost, Bioenergy"
+Wheat,1.3,Straw,0.6,0.12,1.4,"Mulching, Feed"
+Maize,1.2,Stover,0.7,0.15,1.3,"Silage, Briquettes"
+Sorghum,1.3,Stalk,0.6,0.13,1.1,"Bioethanol, Feed"
+Pearl Millet (Bajra),1.1,Stalk,0.5,0.11,1.2,"Cattle Feed, Biofuel"
+Finger Millet (Ragi),1,Straw,0.7,0.12,1,"Compost, Feed"
+Barley,1.2,Straw,0.6,0.1,1.2,"Bedding, Feed"
+Sugarcane,2.5,Bagasse,0.8,0.2,1,"Bioenergy, Paper"
+Cotton,2,Stalk,0.7,0.15,1.3,"Briquettes, Compost"
+Groundnut,1.4,Haulms,1.2,0.15,1.4,"Fodder, Mulch"
+Mustard,1.2,Stalk,0.8,0.18,1.1,"Compost, Fuel"
+Soybean,1.3,Haulms,1.3,0.2,1.3,"Feed, Fertilizer"
+Sunflower,1.1,Stalk,1.1,0.15,1.4,"Mulch, Biochar"
+Sesame,1,Stalk,0.9,0.13,1.2,"Biofuel, Fodder"
+Chickpea,1.2,Stalk,1.4,0.2,1.1,"Feed, Compost"
+Pigeon Pea (Tur),1.3,Stalk,1.3,0.22,1.2,"Fuel, Mulch"
+Black Gram (Urad),1.2,Stalk,1.4,0.2,1.1,"Compost, Feed"
+Green Gram (Moong),1.1,Stalk,1.3,0.18,1,"Fodder, Fertilizer"
+Lentil,1,Straw,1.4,0.22,1.1,"Feed, Soil Amendment"
+Pea,1.2,Vine,1.2,0.2,1,"Compost, Feed"
+Potato,0.6,Haulms,0.9,0.15,1,"Biofertilizer, Compost"
+Tomato,0.8,Stalk,0.8,0.12,1.1,"Mulch, Compost"
+Onion,0.7,Leaves,0.6,0.1,1.2,"Manure, Bioenergy"
+Garlic,0.6,Leaves,0.7,0.1,1.1,"Compost, Feed"
+Cabbage,0.9,Leaves,0.8,0.12,1.2,"Animal Feed, Compost"
+Cauliflower,0.9,Leaves,0.8,0.12,1.2,"Feed, Mulch"
+Brinjal (Eggplant),1,Stalk,0.8,0.15,1.1,"Compost, Fuel"
+Okra,1,Stalk,0.9,0.16,1.2,"Mulch, Briquettes"
+Chillies,1.1,Stalk,0.7,0.1,1,"Compost, Fuel"
+Spinach,0.8,Leaves,0.9,0.1,1,"Manure, Feed"
+Bottle Gourd,0.9,Vine,0.7,0.12,1.1,"Compost, Biofuel"
+Bitter Gourd,0.9,Vine,0.8,0.13,1,"Feed, Compost"
+Pumpkin,1,Vine,0.8,0.12,1.1,"Mulch, Compost"
+Ridge Gourd,1,Vine,0.8,0.12,1,"Feed, Mulch"
+Ash Gourd,0.9,Vine,0.8,0.12,1,"Feed, Compost"
+Watermelon,0.8,Vine,0.7,0.1,1.1,"Compost, Feed"
+Muskmelon,0.8,Vine,0.7,0.1,1.1,"Mulch, Compost"
+Banana,2,Pseudostem,0.8,0.15,2,"Fiber, Compost"
+Mango,1.2,Leaves,0.5,0.1,0.9,"Compost, Mulch"
+Guava,1.1,Leaves,0.6,0.12,1,"Feed, Biochar"
+Papaya,1.3,Stalk,0.8,0.15,1.2,"Compost, Biogas"
+Coconut,2.5,Husk,0.5,0.1,1,"Coir, Fuel"
+Arecanut,1.8,Husk,0.6,0.1,1,"Mulch, Fuel"
+Cashew,1.2,Shell,0.5,0.1,0.9,"Compost, Fuel"
+Tea,1.1,Leaves,0.7,0.1,1,"Compost, Mulch"
+Coffee,1.1,Husk,0.8,0.12,1.1,"Biochar, Compost"
+Rubber,1,Leaves,0.6,0.1,0.9,"Mulch, Fuel"
+Jute,1.5,Stick,0.8,0.15,1.2,"Briquettes, Pulp"
+Kenaf,1.4,Stick,0.9,0.15,1.1,"Paper, Biofuel"
+Hemp,1.3,Stalk,1,0.15,1.2,"Fiber, Bioenergy"
+Turmeric,1.1,Leaves,0.8,0.12,1,"Compost, Mulch"
+Ginger,1,Leaves,0.7,0.1,1,"Compost, Feed"
+Sugar Beet,0.8,Leaves,0.8,0.12,1,"Biofertilizer, Feed"
+Sweet Potato,0.9,Vines,0.9,0.15,1.1,"Feed, Compost"
+Tobacco,1.2,Stalk,0.8,0.12,1.1,"Briquettes, Biofuel"
+Cottonseed,1.4,Hull,0.7,0.15,1.2,"Oilcake, Compost"
+Safflower,1.2,Stalk,1,0.2,1.4,"Mulch, Biofuel"
+Linseed,1,Stalk,0.8,0.15,1.3,"Bioenergy, Compost"
+Caster,1.1,Stalk,0.9,0.16,1.2,"Compost, Briquettes"
+Coriander,1,Stalk,0.8,0.1,1,"Feed, Mulch"
+Cumin,0.9,Stalk,0.8,0.1,1.1,"Compost, Feed"
+Fennel,1,Stalk,0.9,0.12,1.2,"Feed, Compost"
+Fenugreek,0.9,Leaves,1,0.15,1.1,"Fodder, Compost"
+Carrot,0.7,Leaves,0.8,0.1,1,"Compost, Feed"
+Beetroot,0.7,Leaves,0.9,0.12,1.1,"Manure, Feed"
+Spinach Beet,0.8,Leaves,0.9,0.1,1,"Manure, Compost"
+Lettuce,0.8,Leaves,0.8,0.1,1,"Compost, Feed"
+Amaranthus,0.9,Leaves,1,0.15,1.2,"Fodder, Compost"
+Drumstick,1.2,Leaves,1.1,0.15,1.3,"Feed, Compost"
+Cluster Bean,1,Stalk,1,0.2,1.2,"Compost, Feed"
+Cowpea,1,Stalk,1.1,0.2,1.2,"Feed, Mulch"
+Lablab,1,Vine,1.1,0.2,1.3,"Feed, Compost"
+French Bean,1,Vine,1.2,0.22,1.2,"Feed, Mulch"
+Soybean (Black),1.3,Haulms,1.3,0.2,1.4,"Feed, Compost"
+Sesame (Til),1.1,Stalk,0.9,0.12,1.3,"Compost, Fuel"
+Niger,1,Stalk,0.8,0.1,1.1,"Compost, Fuel"
+Tuberose,1,Leaves,0.7,0.1,1,"Compost, Mulch"
+Chrysanthemum,1,Stalk,0.8,0.12,1,"Compost, Feed"
+Marigold,0.9,Leaves,0.8,0.12,1.1,"Compost, Feed"
+Rose,1,Leaves,0.8,0.1,1,"Compost, Mulch"
+Jasmine,1,Leaves,0.7,0.1,1,"Compost, Mulch"
+Aloe Vera,0.9,Leaves,0.6,0.1,1.1,"Biofertilizer, Compost"
+Lemongrass,1.2,Leaves,0.8,0.15,1.1,"Mulch, Biofuel"
+Mint,0.8,Leaves,0.8,0.1,1,"Compost, Feed"
+Turmeric (Wild),1,Leaves,0.8,0.12,1,"Compost, Mulch"
+Bamboo,2,Culm,0.5,0.1,1,"Fuel, Biochar"
+Eucalyptus,1.8,Bark,0.6,0.1,0.9,"Paper, Fuel"
+Acacia,1.6,Wood,0.6,0.1,0.9,"Fuel, Compost"
+Neem,1.3,Leaves,0.7,0.12,1,"Compost, Biofertilizer"
+Teak,1.5,Wood,0.5,0.1,0.8,"Timber Waste, Fuel"
+Pomegranate,1.2,Leaves,0.7,0.1,1,"Compost, Mulch"
+Grapes,1,Vine,0.8,0.12,1.1,"Compost, Feed"
+Apple,1,Pruning,0.6,0.1,0.9,"Compost, Mulch"
+Pear,1,Pruning,0.6,0.1,0.9,"Compost, Mulch"
+Litchi,1.1,Leaves,0.6,0.1,1,"Compost, Mulch"
+Sapota,1.2,Leaves,0.7,0.1,1,"Compost, Mulch"
+Quinoa,1.96,Stems,1.09,0.1,1.99,Briquettes
+Buckwheat,1.84,Roots,0.75,0.11,1.07,Briquettes
+Rye,2.32,Stalk,0.73,0.13,1.46,Green Manure
+Millet (Kodo),0.81,Vines,0.55,0.09,1.3,Feed
+Millet (Little),2.22,Leaves,0.51,0.19,1.65,Biofuel
+Proso Millet,1.94,Straw,0.56,0.18,1.36,Biofuel
+Barnyard Grass,1.93,Stalk,0.67,0.11,1.37,Feed
+Foxtail Grass,1.34,Stems,1.03,0.08,1.56,Briquettes
+Quackgrass,1.96,Roots,0.91,0.13,1.39,Mulch
+Bluegrass,1.5,Haulms,0.78,0.12,1.92,Compost
+Timothy Grass,2.47,Leaves,0.81,0.08,1.57,Feed
+Alfalfa,2.44,Stalk,0.66,0.14,1.94,Bioenergy
+Clover (Red),2.28,Leaves,1.19,0.1,1.85,Biofuel
+Clover (White),1.53,Fronds,0.72,0.14,1.78,Green Manure
+Chia,0.71,Stems,0.98,0.09,1.53,Feed
+Flax,1.94,Pruning,0.55,0.19,1.75,Briquettes
+Poppy,0.9,Straw,1.13,0.14,1.63,Bioenergy
+Caraway,1.22,Straw,0.62,0.09,1.02,Biofertilizer
+Dill,2.28,Straw,0.95,0.19,1.73,Mulch
+Thyme,2.47,Vines,1.1,0.17,1.22,Biofertilizer
+Oregano,2.45,Fronds,0.72,0.1,1.96,Mulch
+Basil,2.11,Stalk,0.85,0.18,1.43,Biofuel
+Sage,2.41,Leaves,0.73,0.11,1.48,Briquettes
+Rosemary,1.33,Straw,0.58,0.1,1.57,Compost
+Lavender,2.26,Straw,0.86,0.2,1.48,Biofertilizer
+Sunhemp,2.4,Roots,0.56,0.12,1.07,Biofuel
+Sesbania,0.92,Stems,0.83,0.17,1.34,Biofuel
+Agathi,2.5,Stems,0.71,0.14,1.69,Biofertilizer
+Grewia,1.9,Stalk,0.8,0.19,1.67,Biofertilizer
+Mulberry,1.29,Vines,0.62,0.09,1.04,Mulch
+Blueberry,2.4,Leaves,0.8,0.18,1.98,Briquettes
+Strawberry,2.05,Stalk,0.73,0.09,1.22,Biofertilizer
+Raspberry,2.17,Straw,1.1,0.11,1.25,Feed
+Blackberry,1.97,Fronds,1.06,0.09,1.56,Feed
+Cranberry,0.97,Vines,0.68,0.13,1.07,Bioenergy
+Avocado,1.97,Haulms,1.04,0.15,1.34,Bioenergy
+Kiwi,0.94,Stems,0.79,0.17,1.04,Briquettes
+Dragon Fruit,2.46,Haulms,0.7,0.17,1.17,Fodder
+Peach,1.62,Haulms,0.52,0.15,1.15,Bioenergy
+Plum,1.98,Stems,0.52,0.12,1.29,Briquettes
+Apricot,2.04,Haulms,1.11,0.14,1.94,Compost
+Blue Guava,2.04,Fronds,1.06,0.19,1.61,Biofertilizer
+Starfruit,1.81,Straw,0.94,0.19,1.95,Briquettes
+Passion Fruit,1.06,Vines,0.66,0.15,1.3,Fodder
+Persimmon,0.87,Haulms,0.66,0.12,1.04,Compost
+Figs,1.31,Vines,1.09,0.09,1.08,Fodder
+Jujube,0.81,Stems,0.87,0.14,1.89,Bioenergy
+Bael Fruit,0.91,Roots,0.84,0.12,1.08,Bioenergy
+Wood Apple,2.13,Leaves,1,0.09,1.52,Biofertilizer
+Amla,2.21,Stalk,0.57,0.12,1.18,Bioenergy
+Ber,1.62,Stems,0.57,0.1,1.25,Biofuel
+Sheesham,0.78,Straw,1,0.09,1.52,Briquettes
+Sal,1.18,Vines,0.97,0.11,1.66,Compost
+Mahua,0.85,Pruning,0.59,0.11,1.03,Feed
+Palmyra Palm,0.85,Fronds,1.11,0.1,1.51,Feed
+Date Palm,1.5,Leaves,0.68,0.18,1.2,Feed
+Oil Palm,0.93,Haulms,1.05,0.08,1.7,Compost
+Khus Grass,0.76,Vines,1.17,0.11,1.95,Green Manure
+Vetiver,1.9,Pruning,0.66,0.17,1.27,Briquettes
+Yam,1.94,Roots,1.2,0.15,1.88,Biofertilizer
+Elephant Foot Yam,2.01,Fronds,0.7,0.09,1.05,Biofuel
+Cassava,2.35,Pruning,0.88,0.11,1.2,Fodder
+Taro,2.2,Pruning,0.9,0.1,1.52,Biofuel
+Colocasia,1.17,Stalk,0.97,0.17,1.73,Feed
+Artichoke,1.43,Fronds,0.94,0.18,1.03,Compost
+Asparagus,2.23,Roots,0.99,0.16,1.83,Feed
+Kale,2.26,Vines,1.01,0.12,1.74,Briquettes
+Swiss Chard,2.17,Fronds,1.17,0.16,1.51,Biofertilizer
+Leek,2.48,Haulms,0.97,0.14,1.88,Biofertilizer
+Turnip,1.96,Stems,0.98,0.19,1.19,Briquettes
+Radish,1.7,Haulms,0.87,0.17,1.39,Green Manure
+Parsnip,2.04,Straw,0.66,0.12,1.95,Compost
+Celery,2.37,Vines,0.58,0.17,1.8,Green Manure
+Endive,2.18,Roots,0.93,0.15,1.46,Green Manure
+Romaine Lettuce,1.29,Leaves,1.19,0.17,1.17,Green Manure
+Iceberg Lettuce,1.7,Pruning,0.57,0.2,1.88,Compost
+Purslane,1.19,Pruning,0.99,0.18,1.8,Biofertilizer
+Watercress,1.68,Vines,0.66,0.1,1.6,Mulch
+Bamboo Shoot,0.79,Vines,0.51,0.16,1.95,Compost
+Plantain,1.52,Leaves,1.16,0.15,1.07,Mulch
+Horned Melon,2.36,Roots,0.51,0.13,1.48,Biofertilizer
+Tinda,1.36,Stems,1.04,0.08,1.8,Briquettes
+Kohlrabi,0.71,Vines,0.88,0.09,1.08,Feed
+Broccolini,0.78,Stalk,0.97,0.13,1.91,Mulch
+Edamame,1.44,Haulms,1.08,0.13,1.59,Briquettes
+Winged Bean,1.96,Vines,0.83,0.13,1.35,Biofertilizer
+Pinto Bean,1.42,Vines,1.05,0.2,1.66,Fodder
+Navy Bean,1.46,Straw,1.13,0.15,1.06,Fodder
+Red Kidney Bean,1.4,Fronds,0.56,0.19,1.9,Mulch
+Bambara Groundnut,1.73,Stalk,0.84,0.12,1.49,Fodder
+African Yam Bean,0.95,Roots,0.85,0.18,1.5,Feed
+Sword Bean,1.07,Leaves,1.07,0.09,1.91,Mulch
+Jicama,2.25,Stems,0.97,0.09,1.79,Mulch
+Moth Bean,1.05,Stalk,0.9,0.17,1.42,Bioenergy
+Sao Bean,2.4,Roots,0.85,0.1,1.89,Biofuel
+Ackee,2.31,Vines,1.08,0.17,1.49,Green Manure
+Breadfruit,1.37,Haulms,1.04,0.14,1.25,Green Manure
+Longan,2.39,Leaves,0.7,0.18,1.02,Mulch
+Rambutan,1.51,Fronds,0.71,0.11,1.6,Briquettes
+Mangosteen,2.1,Pruning,0.68,0.12,1.59,Biofuel
+Soursop,1.44,Roots,1.04,0.09,1.15,Mulch
+Custard Apple,2.03,Fronds,1.06,0.09,1.87,Compost
+Snake Fruit,2.17,Stalk,0.88,0.2,1.35,Feed
+Salak Palm,1.31,Leaves,0.56,0.15,1.9,Biofertilizer
+Durian,0.95,Vines,0.85,0.18,1.56,Biofertilizer
+Langsat,2.44,Vines,0.84,0.09,1.76,Biofertilizer
+Pulasan,0.96,Leaves,1.16,0.14,1.8,Compost
+Miracle Fruit,1.95,Vines,1.14,0.17,1.24,Bioenergy
+Bignay,2.3,Vines,0.73,0.09,1.35,Biofuel
+Mamey Sapote,1.36,Leaves,1.09,0.2,1.77,Briquettes
+White Sapote,2.47,Fronds,0.96,0.13,1.15,Bioenergy
+Lucuma,1.48,Roots,0.54,0.11,1.87,Fodder
+Plant Bergamot,1.72,Stems,0.83,0.18,1.18,Green Manure
+Tamarillo,2.18,Straw,1.2,0.08,1.88,Biofertilizer
+Physalis,1.48,Straw,0.73,0.18,1.24,Compost
+Gooseberry,1.05,Fronds,0.72,0.16,1.39,Bioenergy
+Romanesco,1.9,Stems,0.8,0.09,1.69,Fodder
+Mizuna,2.5,Pruning,0.55,0.15,1.05,Fodder
+Tat Soi,0.9,Pruning,0.79,0.1,1.96,Biofuel
+Komatsuna,1.56,Stalk,0.53,0.17,1.76,Fodder
+Napa Cabbage,0.77,Fronds,0.62,0.09,1.3,Briquettes
+Daikon,0.74,Haulms,0.74,0.16,1.59,Bioenergy
+Bok Choy,1.08,Stems,0.78,0.14,1.13,Compost
+Yardlong Bean,1.1,Straw,0.87,0.09,1.27,Fodder
+Adzuki Bean,2.09,Vines,0.54,0.16,1.38,Green Manure
+Pigeonwood,0.92,Stems,0.62,0.19,1.93,Feed
+Wild Rice,1.44,Stalk,0.83,0.13,1.2,Biofuel
+Job�s Tears,1.78,Fronds,1.11,0.1,1.16,Green Manure
+Fonio,1.35,Vines,0.55,0.15,1.94,Fodder
+Teff,1.22,Stems,0.82,0.16,1.58,Feed
+Kamut,1.34,Leaves,0.62,0.15,1.71,Green Manure
+Emmer Wheat,2.04,Straw,1.05,0.13,1.41,Compost
+Spelt Wheat,0.97,Haulms,0.69,0.17,1.17,Biofuel
+Einkorn Wheat,2.38,Stems,1.07,0.08,1.39,Feed
+Triticale,0.82,Pruning,0.66,0.12,1.51,Feed
+Pearl Barley,1.99,Straw,1.03,0.19,1.18,Mulch
+Oat Grass,2.01,Straw,0.89,0.2,1.35,Briquettes
+Canary Grass,1.83,Roots,1.17,0.1,1.71,Green Manure
+Sudan Grass,1.98,Roots,1.17,0.1,1.74,Fodder
+Sorghum Sudan,0.9,Leaves,0.6,0.18,1.08,Biofuel
+Guinea Grass,1.52,Stalk,1.09,0.17,1.19,Mulch
+Napier Grass,1.23,Roots,0.59,0.11,1.05,Biofertilizer
+Berseem,2.31,Pruning,0.77,0.16,1.71,Green Manure
+Stylo Grass,0.71,Straw,0.79,0.11,1.22,Biofertilizer
+Gamba Grass,1.02,Straw,1.06,0.1,1.7,Bioenergy
+Signal Grass,2.42,Haulms,0.9,0.12,1.1,Compost
+Ryegrass,1.86,Pruning,0.75,0.2,1.25,Bioenergy
+Tall Fescue,1.44,Leaves,0.94,0.13,1.7,Biofertilizer
+Cenchrus,1.79,Haulms,1.2,0.09,1.47,Fodder
+Roadside Grass,1.11,Pruning,1.16,0.12,1.6,Compost
+Morning Glory,0.95,Stalk,0.6,0.19,1.34,Compost
+Water Spinach,1.78,Haulms,1,0.17,1.81,Green Manure
+Chinese Kale,1.7,Leaves,0.93,0.14,1.54,Biofertilizer
+Lotus Stem,1.28,Leaves,0.51,0.17,1.63,Bioenergy
+Water Chestnut,1.43,Stems,0.91,0.1,1.64,Bioenergy
+Seaweed (Kelp),1.72,Roots,0.99,0.11,1.67,Green Manure
+Spirulina,1.28,Stalk,0.77,0.19,1.6,Green Manure
+Moringa,1.08,Roots,0.51,0.1,1.39,Green Manure
+Horned Cucumber,2.45,Stalk,0.67,0.19,1.08,Briquettes
+Desert Lime,1.87,Haulms,0.56,0.2,1.89,Fodder
+Bush Tomato,2.17,Straw,0.98,0.19,1.63,Biofuel
+Quandong,0.87,Pruning,0.87,0.14,1.75,Compost
+Warrigal Greens,1.18,Straw,0.78,0.15,1.93,Compost
+Ice Plant,0.74,Leaves,0.52,0.17,1.37,Briquettes
+Golden Berry,2.09,Vines,0.79,0.11,1.83,Fodder
+Chickweed,2.47,Stems,0.65,0.16,1.67,Feed
+Plantain Weed,2.06,Vines,0.64,0.15,1.93,Compost
+Sorrel,2.31,Roots,1.06,0.19,1.72,Biofertilizer
+Shepherd's Purse,1.71,Haulms,1.09,0.19,1.55,Feed
+Nettle,1.87,Fronds,0.81,0.13,1.13,Green Manure
+Plantago,2.2,Haulms,1.18,0.12,1.14,Mulch
+Kangkong,1.07,Stalk,0.74,0.09,1.35,Mulch

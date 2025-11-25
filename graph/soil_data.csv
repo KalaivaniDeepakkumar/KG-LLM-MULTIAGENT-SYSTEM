@@ -1,0 +1,43 @@
+Soil_Type,Retention_Capacity
+Alluvial Soil,High
+Khadar Alluvial Soil,High
+Bhangar Alluvial Soil,Medium
+Coastal Alluvial Soil,High
+Riverine Alluvial Soil,High
+Black (Regur) Soil,Very High
+Deep Black Soil,Very High
+Medium Black Soil,High
+Shallow Black Soil,Medium
+Red Soil,Medium
+Red Sandy Soil,Low
+Red Loamy Soil,Medium
+Yellow Soil,Low
+Laterite Soil,Low
+Lateritic Gravel Soil,Low
+Desert / Arid Soil,Very Low
+Rocky / Stony Wasteland Soil,Very Low
+Saline Soil,Low
+Alkaline Soil,Low
+Saline Alkaline Soil,Low
+Peaty Soil,Very High
+Marshy Soil,Very High
+Organic Soil,Very High
+Forest Soil,Medium
+Mountain Soil,Low to Medium
+Himalayan Highland Soil,Low
+Sandy Soil,Very Low
+Coastal Sandy Soil,Low
+Clayey Soil,High
+Heavy Clay Soil,Very High
+Loamy Soil,High
+Silty Loam,Medium to High
+Sandy Loam,Medium
+Clay Loam,High
+Vertisol,Very High
+Inceptisol,Medium
+Entisol,Low
+Aridisol,Very Low
+Mollisol,High
+Ultisol,Low
+Oxisol,Low
+Alfisol,Medium
