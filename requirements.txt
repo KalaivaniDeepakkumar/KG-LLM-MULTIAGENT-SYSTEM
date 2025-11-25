@@ -1,9 +1,13 @@
-flask>=2.3.0
-requests>=2.31.0
+google-generative-ai
 python-dotenv>=1.0.0
-neo4j>=5.0.0
+neo4j>=5.9.0
+Flask>=2.2.0
 pandas>=2.0.0
+<<<<<<< HEAD
 tqdm>=4.65.0
 
 google-genai
 
+=======
+requests>=2.31.0
+>>>>>>> 311aa99fe9240e463da8c30aea9c349ab85a1e9c
