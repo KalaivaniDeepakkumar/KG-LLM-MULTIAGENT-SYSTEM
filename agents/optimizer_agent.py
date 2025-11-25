@@ -6,7 +6,7 @@ Ensures capacity limits, policies, soil constraints, and sustainability rules ar
 """
 
 import json
-import google.generativeai as genai
+from google import genai
 import os
 from dotenv import load_dotenv
 
@@ -14,17 +14,13 @@ load_dotenv()
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-# Configure Gemini SDK once
-if GEMINI_API_KEY:
-    genai.configure(api_key=GEMINI_API_KEY)
-
 
 class OptimizerAgent:
     """Agent responsible for optimizing residue allocation plans."""
 
     def __init__(self, model="gemini-2.5-flash"):
         self.model = model
-        self.client = genai.GenerativeModel(model)
+        self.client = genai.Client(api_key=GEMINI_API_KEY)
 
     def optimize_plan(self, initial_plan, crop_type, residue_amount, location, soil_type, kg_context=None):
         """
@@ -108,7 +104,7 @@ Return ONLY valid JSON. No markdown.
 
         try:
             # Call Gemini SDK
-            response = self.client.generate_content(prompt)
+            response = self.client.models.generate_content(model=self.model, contents=prompt)
             raw_text = response.text.strip()
 
             parsed = self._extract_json(raw_text)

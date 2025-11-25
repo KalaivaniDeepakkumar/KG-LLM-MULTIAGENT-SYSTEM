@@ -2,7 +2,7 @@ import json
 import os
 import csv
 from flask import Flask, render_template, request, jsonify
-import google.generativeai as genai
+from google import genai
 
 # Import your agents + KG context builder
 from agents.planner_agent import PlannerAgent
@@ -13,11 +13,6 @@ from graph.neo4j_context import get_comprehensive_context
 # INITIAL SETUP
 # -------------------------------------------------------------
 app = Flask(__name__)
-
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-
-if GEMINI_API_KEY:
-    genai.configure(api_key=GEMINI_API_KEY)
 
 # Initialize agents (Gemini-powered)
 planner = PlannerAgent(model="gemini-2.5-flash")

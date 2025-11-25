@@ -6,7 +6,7 @@ Avoids REST endpoints (deprecated for Gemini 2.x models).
 """
 
 import json
-import google.generativeai as genai
+from google import genai
 import os
 from dotenv import load_dotenv
 
@@ -14,17 +14,13 @@ load_dotenv()
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-# Configure Gemini once → SDK handles the rest
-if GEMINI_API_KEY:
-    genai.configure(api_key=GEMINI_API_KEY)
-
 
 class PlannerAgent:
     """Agent responsible for creating initial KG-grounded allocation plans."""
 
     def __init__(self, model="gemini-2.5-flash"):
         self.model = model
-        self.client = genai.GenerativeModel(model)
+        self.client = genai.Client(api_key=GEMINI_API_KEY)
 
     def create_plan(self, crop_type, crop_yield, residue_amount, location, soil_type, kg_context=None):
         """
@@ -98,7 +94,7 @@ RULES:
 
         try:
             # Call Gemini SDK
-            response = self.client.generate_content(prompt)
+            response = self.client.models.generate_content(model=self.model, contents=prompt)
 
             raw_text = response.text.strip()
             return self._extract_json(raw_text)
